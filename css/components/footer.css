@@ -1,0 +1,31 @@
+footer {
+  background-color: var(--light-tertiary-color);
+  box-shadow: 3px -13px 20px 5px rgba(0,0,0,0.82);
+  -webkit-box-shadow: 3px -13px 20px 5px rgba(0,0,0,0.82);
+  -moz-box-shadow: 3px -13px 20px 5px rgba(0,0,0,0.82);
+  background-color: #979797;
+}
+
+footer .footer__content {
+  text-align: center;
+  padding: 6rem 2rem 1rem;
+  max-width: 47rem;
+}
+
+footer .footer__content .footer__contact span {
+  display: block;
+  font-weight: 500;
+}
+
+footer .footer__content ul li {
+  display: inline-block;
+}
+
+footer .footer__content ul a {
+  display: inline-block;
+  padding: 1rem;
+}
+
+footer .footer__content .footer__copyright {
+  font-size: 1.4rem;
+}

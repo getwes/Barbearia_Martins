@@ -5,6 +5,9 @@
   box-shadow: 2px 11px 20px 5px rgba(0,0,0,0.82);
  -webkit-box-shadow: 2px 11px 20px 5px rgba(0,0,0,0.82);
  -moz-box-shadow: 2px 11px 20px 5px rgba(0,0,0,0.82);
+  box-sizing: border-box;
+      margin: 0;
+      padding: 0;
 }
 
 .skills .skills__content {
@@ -107,77 +110,82 @@ input:checked + label {
   background-color: #333;
 }
 
-  .portfolio-carousel {
-    max-width: 800px;
-    margin: 0 auto;
-  }
 
-  .carousel {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-  }
+     
+    
 
-  .slides {
-    display: flex;
-    width: 800%; /* 8 slides = 800% */
-    transition: transform 0.5s ease-in-out;
-  }
+    span {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
 
-  .slide {
-    flex: 0 0 100%;
-  }
+    .carousel-container {
+      max-width: 100%;
+      width: 100%;
+      max-height: 90vh;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
 
-    .img-container {
-  aspect-ratio: 7 / 6;
-  max-width: 700px;
-  width: 100%;
-}
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      align-items: center;
+    }
 
-  .img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+    .carousel-slide {
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
 
-  input[type="radio"] {
-    display: none;
-  }
+    .carousel-slide img {
+      max-width: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 10px;
+      background: #000;
+    }
 
-  /* Slide movement */
-  #slide1:checked ~ .carousel .slides { transform: translateX(0%); }
-  #slide2:checked ~ .carousel .slides { transform: translateX(-100%); }
-  #slide3:checked ~ .carousel .slides { transform: translateX(-200%); }
-  #slide4:checked ~ .carousel .slides { transform: translateX(-300%); }
-  #slide5:checked ~ .carousel .slides { transform: translateX(-400%); }
-  #slide6:checked ~ .carousel .slides { transform: translateX(-500%); }
-  #slide7:checked ~ .carousel .slides { transform: translateX(-600%); }
-  #slide8:checked ~ .carousel .slides { transform: translateX(-700%); }
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
+      pointer-events: none;
+    }
 
-  .dots {
-    text-align: center;
-    margin-top: 10px;
-  }
+    .carousel-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      transition: background 0.3s;
+      pointer-events: auto;
+    }
 
-  .dots label {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+    .carousel-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-  #slide1:checked ~ .carousel .dots label[for="slide1"],
-  #slide2:checked ~ .carousel .dots label[for="slide2"],
-  #slide3:checked ~ .carousel .dots label[for="slide3"],
-  #slide4:checked ~ .carousel .dots label[for="slide4"],
-  #slide5:checked ~ .carousel .dots label[for="slide5"],
-  #slide6:checked ~ .carousel .dots label[for="slide6"],
-  #slide7:checked ~ .carousel .dots label[for="slide7"],
-  #slide8:checked ~ .carousel .dots label[for="slide8"] {
-    background-color: #333;
-  }
-
+    @media (max-width: 600px) {
+      .carousel-button {
+        font-size: 18px;
+        padding: 8px;
+      }
+    }

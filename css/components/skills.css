@@ -181,19 +181,3 @@ input:checked + label {
     background-color: #333;
   }
 
-  @media (max-width: 768px) {
-  .portfolio-carousel {
-    padding: 0 10px;
-  }
-
-  .img-container {
-    max-width: 100%;
-    aspect-ratio: 4 / 3;
-  }
-
-  .dots label {
-    width: 10px;
-    height: 10px;
-    margin: 4px;
-  }
-}
